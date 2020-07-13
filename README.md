@@ -1,2 +1,2 @@
-# datastr-algorithms
-My solutions to the exersizes in Colt Steel's Data Structures and Algorithms course
+# Data Structures and Algorithms
+My solutions/implementations to the exersizes in Colt Steel's Data Structures and Algorithms course
