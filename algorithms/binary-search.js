@@ -3,7 +3,7 @@
 
 function binarySearch(arr, item) {
 	searchArray = arr; // Avoid mutating the original array
-	baseAdrress = 0;
+	baseAdrress = 0; // Keeps track of indexing when the array is split
 
 	while (searchArray.length >= 1) {
 		midIndex = Math.floor(searchArray.length / 2);
