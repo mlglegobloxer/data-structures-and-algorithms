@@ -113,7 +113,6 @@ class SinglyLinkedList {
 
   reverse() {
     if (this.length == 0) return this;
-    // Refactor below!!!
     var prev = null,
       curr = this.head,
       next = this.head.next;
