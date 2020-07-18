@@ -20,4 +20,4 @@ function binarySearch(arr, item) {
   return -1;
 }
 
-// Implemented iteratively to reduce space complexity
+// Implemented iteratively to reduce space complexity,   O(log(n)) - requres a sorted input

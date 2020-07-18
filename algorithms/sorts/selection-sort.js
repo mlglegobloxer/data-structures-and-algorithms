@@ -22,3 +22,5 @@ function selectionSort(sortingArray) {
 
   return arr;
 }
+
+// O(n^2)

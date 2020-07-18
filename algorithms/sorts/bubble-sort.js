@@ -22,3 +22,5 @@ function bubbleSort(sortingArray) {
   }
   return arr;
 }
+
+// O(n^2)

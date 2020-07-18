@@ -16,3 +16,5 @@ function insertionSort(sortingArray) {
 
   return arr;
 }
+
+// O(n^2) - very good for almost sorted inputs

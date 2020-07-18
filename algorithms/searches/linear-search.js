@@ -9,3 +9,5 @@ function linearSerach(arr, item) {
   }
   return -1;
 }
+
+// O(n) - can be used for a unsorted input
