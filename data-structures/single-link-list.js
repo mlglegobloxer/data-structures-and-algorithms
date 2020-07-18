@@ -128,7 +128,7 @@ class SinglyLinkedList {
     return this;
   }
 
-  printList() {
+  print() {
     var currentNode = this.head;
     for (let i = 0; i < this.length; i++) {
       console.log(currentNode.val);
