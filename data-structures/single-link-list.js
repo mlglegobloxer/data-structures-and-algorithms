@@ -74,7 +74,7 @@ class SinglyLinkedList {
         currentNode = currentNode.next;
       }
       return currentNode;
-    } else return undefined; // Index not in list {
+    } else return undefined; // Index not in list
   }
 
   set(index, val) {
