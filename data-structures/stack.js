@@ -1,7 +1,7 @@
 // This program implements a singly linked list
 // This is part of my solutions to Colt Steel's Algorithms and Data Structures course
 
-// Implementation of a list based stack
+// Implementation of a node of a list based stack
 class Node {
   constructor(val) {
     this.val = val;
@@ -9,6 +9,7 @@ class Node {
   }
 }
 
+// Implementation of a list based stack
 class Stack {
   constructor() {
     this.last = null;
