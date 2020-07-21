@@ -1,2 +1,5 @@
 # Data Structures and Algorithms
-My solutions/implementations to the exersizes in Colt Steel's Data Structures and Algorithms course
+
+This repo contains my implementations of common data structures and algorithms in javascript
+
+These are also my solutions to the problems in Colt Steel's Data Structures and Algorithms course on Udemy
