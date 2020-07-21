@@ -20,9 +20,7 @@ class Queue {
   enQueue(val) {
     var newNode = new Node(val);
     if (this.length == 0) this.first = newNode;
-    else {
-      this.last.next = newNode;
-    }
+    else this.last.next = newNode;
     this.last = newNode;
     return ++this.length;
   }
@@ -31,10 +29,12 @@ class Queue {
     if (this.length == 0) return undefined;
     else {
       if (this.length == 1) this.last == null;
-      var removedNodeVal = this.first.val;
+      var removedNode = this.first;
       this.first = this.first.next;
       this.length--;
-      return removedNodeVal;
+      return removedNode.val;
     }
   }
 }
+
+// Arrays can be treated like queues also
