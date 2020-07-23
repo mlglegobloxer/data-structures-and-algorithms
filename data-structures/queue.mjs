@@ -38,3 +38,6 @@ class Queue {
 }
 
 // Arrays can be treated like queues also
+
+// Export for use in other modules
+export default Queue;

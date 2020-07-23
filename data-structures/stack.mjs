@@ -38,3 +38,6 @@ class Stack {
 }
 
 // Arrays can be treated like stacks also
+
+// Export for use in other modules
+export default Stack;

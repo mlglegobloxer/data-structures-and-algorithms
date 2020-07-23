@@ -1,6 +1,10 @@
 // This program implements a singly linked list
 // This is part of my solutions to Colt Steel's Algorithms and Data Structures course
 
+import Queue from "./queue.mjs";
+
+let q = new Queue();
+
 // Implementation of a node in a binary search tree
 class Node {
   constructor(val) {
@@ -43,7 +47,7 @@ class BinarySearchTree {
     // Traverse the tree from the root to try find val
     while (true) {
       if (currentNode.val == val) return true;
-      // If still possible, continue to traverse the list
+      // If still possible to find val, continue to traverse the list
       else if (val < currentNode.val) {
         if (currentNode.left !== null) currentNode = currentNode.left;
         else return false; // Not possible to find val
@@ -53,4 +57,43 @@ class BinarySearchTree {
       }
     }
   }
+
+  // BFS - breath first search, DFS - depth first search
+
+  BFS() {
+    var visitedNodes = [];
+    var queue = []; // Temporarly stores nodes for processing  USE A QUEUE CLASS, ARRAY INCREASES TIME COMPLEXITY
+    var currentNode = this.root;
+    queue.push(currentNode);
+
+    while (queue.length > 0) {
+      currentNode = queue.shift();
+      visitedNodes.push(currentNode.val);
+      // If currentNode has children, add them to the queue
+      if (currentNode.left != null) queue.push(currentNode.left);
+      if (currentNode.right != null) queue.push(currentNode.right);
+    }
+    return visitedNodes;
+  }
+
+  preOrderDFS() {}
+
+  postOrderDFS() {}
+
+  inOrderDFS() {}
 }
+
+// Test Script
+let t = new BinarySearchTree();
+
+for (let i = 0; i < 3; i++) {
+  t.insert(i);
+  t.insert(-i);
+  t.insert(5 - i / 2);
+  t.insert(5 + i / 2);
+}
+
+console.log(t.BFS());
+
+// Export for use in other modules
+export default BinarySearchTree;
