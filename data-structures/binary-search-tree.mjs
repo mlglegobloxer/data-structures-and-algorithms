@@ -1,9 +1,8 @@
 // This program implements a singly linked list
 // This is part of my solutions to Colt Steel's Algorithms and Data Structures course
 
+// Import a queue for use in traversal algorithms
 import Queue from "./queue.mjs";
-
-let q = new Queue();
 
 // Implementation of a node in a binary search tree
 class Node {
@@ -62,16 +61,16 @@ class BinarySearchTree {
 
   BFS() {
     var visitedNodes = [];
-    var queue = []; // Temporarly stores nodes for processing  USE A QUEUE CLASS, ARRAY INCREASES TIME COMPLEXITY
+    var queue = new Queue(); // Temporarly stores nodes for processing
     var currentNode = this.root;
-    queue.push(currentNode);
-
+    queue.enQueue(currentNode);
+    // BFS traversal
     while (queue.length > 0) {
-      currentNode = queue.shift();
+      currentNode = queue.deQueue();
       visitedNodes.push(currentNode.val);
       // If currentNode has children, add them to the queue
-      if (currentNode.left != null) queue.push(currentNode.left);
-      if (currentNode.right != null) queue.push(currentNode.right);
+      if (currentNode.left != null) queue.enQueue(currentNode.left);
+      if (currentNode.right != null) queue.enQueue(currentNode.right);
     }
     return visitedNodes;
   }
