@@ -3,8 +3,6 @@
 
 import Queue from "./queue.mjs";
 
-let q = new Queue();
-
 // Implementation of a node in a binary search tree
 class Node {
   constructor(val) {
