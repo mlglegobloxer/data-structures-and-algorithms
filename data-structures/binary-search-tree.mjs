@@ -1,4 +1,4 @@
-// This program implements a singly linked list
+// This program implements a binary search tree
 // This is part of my solutions to Colt Steel's Algorithms and Data Structures course
 
 // Import a queue for use in traversal algorithms
