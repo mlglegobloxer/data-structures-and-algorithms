@@ -82,7 +82,6 @@ class DoublyLinkedList {
     return this;
   }
 
-  // Unimplemented features
   get(index) {
     if (index >= 0 && index < this.length) {
       // Starting at the head, traverse list index many times

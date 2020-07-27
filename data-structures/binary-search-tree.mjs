@@ -58,6 +58,8 @@ class BinarySearchTree {
   }
 
   // BFS - breath first search, DFS - depth first search
+  // BFS is better for sparce trees (space complexity)
+  // DFS is better for dense trees  (space complexity)
 
   BFS() {
     var visitedNodes = [];
@@ -75,24 +77,62 @@ class BinarySearchTree {
     return visitedNodes;
   }
 
-  preOrderDFS() {}
+  preOrderDFS() {
+    var visitedNodes = [];
+    // Recursive helper function to perform preOrderDFS
+    function preOrderDFSHelper(node) {
+      visitedNodes.push(node.val);
+      if (node.left != null) preOrderDFSHelper(node.left);
+      if (node.right != null) preOrderDFSHelper(node.right);
+    }
+    // Evaluate the function starting at the root and return
+    preOrderDFSHelper(this.root);
+    return visitedNodes; // Could be used for "exporting" tree (not in JSON form)
+  }
 
-  postOrderDFS() {}
+  postOrderDFS() {
+    var visitedNodes = [];
+    // Recursive helper function to perform postOrderDFS
+    function postOrderDFSHelper(node) {
+      if (node.left != null) postOrderDFSHelper(node.left);
+      if (node.right != null) postOrderDFSHelper(node.right);
+      visitedNodes.push(node.val);
+    }
+    // Evaluate the function starting at the root and return
+    postOrderDFSHelper(this.root);
+    return visitedNodes;
+  }
 
-  inOrderDFS() {}
+  inOrderDFS() {
+    var visitedNodes = [];
+    // Recursive helper function to perform inOrderDFS
+    function inOrderDFSHelper(node) {
+      if (node.left != null) inOrderDFSHelper(node.left);
+      visitedNodes.push(node.val);
+      if (node.right != null) inOrderDFSHelper(node.right);
+    }
+    // Evaluate the function starting at the root and return
+    inOrderDFSHelper(this.root);
+    return visitedNodes; // Returns all nodes in order
+  }
 }
 
-// Test Script
-let t = new BinarySearchTree();
-
-for (let i = 0; i < 3; i++) {
-  t.insert(i);
-  t.insert(-i);
-  t.insert(5 - i / 2);
-  t.insert(5 + i / 2);
-}
-
-console.log(t.BFS());
+// // Test Script
+// let t = new BinarySearchTree();
+//
+// t.insert(10);
+// t.insert(6);
+// t.insert(3);
+// t.insert(8);
+// t.insert(15);
+// t.insert(20);
+//
+// // Creates the BST:
+// //           10
+// //      6         15
+// //    3   8         20
+//
+// console.log(t.inOrderDFS());
 
 // Export for use in other modules
 export default BinarySearchTree;
