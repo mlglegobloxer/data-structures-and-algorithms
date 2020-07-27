@@ -2,7 +2,7 @@
 // This is part of my solutions to Colt Steel's Algorithms and Data Structures course
 
 // Import a queue for use in traversal algorithms
-import Queue from "./queue.mjs";
+import Queue from "../stacks-queues/queue.mjs";
 
 // Implementation of a node in a binary search tree
 class Node {
