@@ -1,7 +1,7 @@
 // This program implements a binary search tree
 // This is part of my solutions to Colt Steel's Algorithms and Data Structures course
 
-// Import a queue for use in traversal algorithms
+// Import a queue for use in the BFS algorithm
 import Queue from "../stacks-queues/queue.mjs";
 
 // Implementation of a node in a binary search tree
