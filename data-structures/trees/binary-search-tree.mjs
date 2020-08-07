@@ -87,7 +87,7 @@ class BinarySearchTree {
     }
     // Evaluate the function starting at the root and return
     preOrderDFSHelper(this.root);
-    return visitedNodes; // Could be used for "exporting" tree (not in JSON form)
+    return visitedNodes; // Could be used for "exporting" tree
   }
 
   postOrderDFS() {
