@@ -46,7 +46,7 @@ class BinarySearchTree {
     // Traverse the tree from the root to try find val
     while (true) {
       if (currentNode.val == val) return true;
-      // If still possible to find val, continue to traverse the list
+      // If still possible to find val, continue to traverse the tree
       else if (val < currentNode.val) {
         if (currentNode.left !== null) currentNode = currentNode.left;
         else return false; // Not possible to find val
