@@ -10,7 +10,7 @@ class HashTable {
   // Private hash method
   _hash(key) {
     var total = 0;
-    var prime = 83; // Primes mean less colisions ???
+    var prime = 83; // Using primes mean less colisions ???
     // Hashing algorithm
     for (let i = 0; i < Math.min(key.length, 100); i++) {
       var char = key[i].toLowerCase();
