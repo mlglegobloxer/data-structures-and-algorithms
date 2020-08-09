@@ -26,10 +26,11 @@ class MaxBinaryHeap {
 
   // Not Implemented
   extractMax() {
-    // Save the max to return
-    var maxValue = this.values.shift();
-    // Transform back into a heap
-    this.values.unshift(this.values.pop()); // Make the last value the root
+    // Save the max to return, replace with last element
+    var maxValue = this.values[0];
+    this.values[0] = this.values.pop();
+
+    // Transform back into a max binary heap
 
     var maxIndex = this.values.length - 1;
     var parentIndex = 0;

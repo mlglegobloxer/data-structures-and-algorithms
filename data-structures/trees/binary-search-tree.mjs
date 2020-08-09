@@ -46,7 +46,7 @@ class BinarySearchTree {
     // Traverse the tree from the root to try find val
     while (true) {
       if (currentNode.val == val) return true;
-      // If still possible to find val, continue to traverse the list
+      // If still possible to find val, continue to traverse the tree
       else if (val < currentNode.val) {
         if (currentNode.left !== null) currentNode = currentNode.left;
         else return false; // Not possible to find val
@@ -87,7 +87,7 @@ class BinarySearchTree {
     }
     // Evaluate the function starting at the root and return
     preOrderDFSHelper(this.root);
-    return visitedNodes; // Could be used for "exporting" tree (not in JSON form)
+    return visitedNodes; // Could be used for "exporting" tree
   }
 
   postOrderDFS() {
