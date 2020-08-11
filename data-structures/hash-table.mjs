@@ -75,9 +75,9 @@ class HashTable {
   }
 }
 
-// Test Script
-let ht = new HashTable(5);
-
+//  // Test Script
+//  let ht = new HashTable(5);
+//
 //  // More sets than size of keyMap => at least 1 collision
 //  ht.set("Red", "#FF0000");
 //  ht.set("Aqua", "#00FFFF");
