@@ -1,31 +1,31 @@
 // This program implements a max binary heap
 // This is part of my solutions to Colt Steel's Algorithms and Data Structures course
 
+// Implementation of a node for a max binary heap
+class Node {
+  constructor(val) {
+    this.val = val;
+    this.left = null;
+    this.right = null;
+  }
+}
+
 // Implementation of a max binary heap
 class MaxBinaryHeap {
   constructor() {
-    this.values = [];
-  }
-
-  // Private swap method for swapping nodes
-  _swap(index1, index2) {
-    var temp = this.values[index1];
-    this.values[index1] = this.values[index2];
-    this.values[index2] = temp;
+    this.root = null;
   }
 
   insert(val) {
-    this.values.push(val);
-    // Find the correct position for the value
-    var index = this.values.length - 1;
-    var parentIndex = Math.floor((index - 1) / 2);
-    // While not in correct position
-    while (this.values[parentIndex] < this.values[index]) {
-      // Swap
-      this._swap(parentIndex, index);
-      // Re-assign the indecies
-      index = parentIndex;
-      parentIndex = Math.floor((index - 1) / 2);
+    var insertNode = new Node(val);
+    if (this.root == null) this.root = insertNode;
+    else {
+      // Add node the bottom of the heap
+      var currentNode = this.root;
+      while (currentNode.left != null && currentNode.right != null) {
+        currentNode = currentNode.left;
+      }
+      currentNode.left = insertNode;
     }
   }
 
