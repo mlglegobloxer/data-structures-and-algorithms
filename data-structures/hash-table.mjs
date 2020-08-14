@@ -10,7 +10,7 @@ class HashTable {
   // Private hash method
   _hash(key) {
     var total = 0;
-    var prime = 83; // Primes mean less colisions ???
+    var prime = 83; // Using primes mean less colisions ???
     // Hashing algorithm
     for (let i = 0; i < Math.min(key.length, 100); i++) {
       var char = key[i].toLowerCase();
@@ -75,9 +75,9 @@ class HashTable {
   }
 }
 
-// Test Script
-let ht = new HashTable(5);
-
+//  // Test Script
+//  let ht = new HashTable(5);
+//
 //  // More sets than size of keyMap => at least 1 collision
 //  ht.set("Red", "#FF0000");
 //  ht.set("Aqua", "#00FFFF");
